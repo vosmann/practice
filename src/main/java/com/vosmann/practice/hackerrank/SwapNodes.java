@@ -33,7 +33,6 @@ public class SwapNodes {
     protected static List<String> swap(BufferedReader reader) throws IOException {
 
         int nrNodes = readIntegerFromLine(reader); // N
-        System.out.println("nrNodes: " + nrNodes);
         List<Node> nodes = new ArrayList<Node>(nrNodes + 1); // 0th position is empty, unused.
         nodes.add(0, null); // Beautiful.
 
@@ -41,11 +40,8 @@ public class SwapNodes {
             Node node = Node.fromLine(index, readLine(reader));
             nodes.add(node);
         }
-        System.out.println("Initial tree (in-order traversal):");
-        System.out.println(getInOrderTraversal(nodes));
 
         int nrOps = readIntegerFromLine(reader); // T
-        System.out.println("nr swap operations: " + nrOps);
         List<Integer> ks = new ArrayList<Integer>(nrOps); // all K's, i.e. basic depths
         for (int opNr = 0; opNr < nrOps; ++opNr) {
             ks.add(readIntegerFromLine(reader));
@@ -54,8 +50,6 @@ public class SwapNodes {
         List<String> swapResults = Lists.newArrayList();
         for (int k : ks) { swapAt(k, 1, 1, nodes);
             String swapResult = getInOrderTraversal(nodes);
-            System.out.println("After k: " + k);
-            System.out.println(swapResult);
             swapResults.add(swapResult);
         }
         return swapResults;
