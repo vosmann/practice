@@ -42,7 +42,6 @@ public class Rotation {
 
         for (RotationParam param : params) {
             s = rotate(s, param);
-            System.out.println("New S: " + s);
         }
 
         return s;
@@ -60,13 +59,7 @@ public class Rotation {
             return s;
         }
 
-        System.out.println("prefix: " + prefix);
-        System.out.println("substring: " + substring);
-        System.out.println("suffix: " + suffix);
-
         int effectiveK = param.getK() < substring.length() ? param.getK() : param.getK() % substring.length();
-        System.out.println("k: " + param.getK());
-        System.out.println("k (eff.): " + effectiveK);
         if (effectiveK == 0) {
             return s;
         }
@@ -74,7 +67,6 @@ public class Rotation {
         StringBuilder rotatedSubstring = new StringBuilder();
         for (int index = substring.length() - effectiveK, nr = 0; nr < substring.length(); ++nr, index = (index + 1 >= substring.length()) ? 0 : index + 1) {
             char c = substring.charAt(index);
-            System.out.println(String.format("index: %d, rotNr: %d, char: %c", index, nr, c));
             rotatedSubstring.append(c);
         }
 

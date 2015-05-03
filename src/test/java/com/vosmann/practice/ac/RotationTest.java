@@ -10,7 +10,7 @@ public class RotationTest {
 
     @Test
     public void testPerformRotationOnfile1() throws Exception {
-        String path = "src/test/resources/ac/rotation/rotation-input-01";
+        String path = "src/test/resources/ac/rotation-input-01";
 
         String expected = "ceadb";
         String result = Rotation.performRotationOnfile(path);
@@ -20,7 +20,7 @@ public class RotationTest {
 
     @Test
     public void testPerformRotationOnfile2() throws Exception {
-        String path = "src/test/resources/ac/rotation/rotation-input-02";
+        String path = "src/test/resources/ac/rotation-input-02";
 
         String expected = "vkidskofbk";
         String result = Rotation.performRotationOnfile(path);
