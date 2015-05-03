@@ -1,7 +1,5 @@
 package com.vosmann.practice.hackerrank;
 
-import com.google.common.collect.Lists;
-
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -47,7 +45,7 @@ public class SwapNodes {
             ks.add(readIntegerFromLine(reader));
         }
 
-        List<String> swapResults = Lists.newArrayList();
+        List<String> swapResults = new ArrayList<String>(nrOps);
         for (int k : ks) { swapAt(k, 1, 1, nodes);
             String swapResult = getInOrderTraversal(nodes);
             swapResults.add(swapResult);
