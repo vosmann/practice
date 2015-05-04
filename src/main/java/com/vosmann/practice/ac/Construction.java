@@ -1,10 +1,10 @@
 package com.vosmann.practice.ac;
 
+import com.google.common.collect.Sets;
+
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.Scanner;
+import java.util.*;
 
 public class Construction {
 
@@ -55,6 +55,10 @@ public class Construction {
     }
 
     private static String check(IslandPair pair) {
+        return check(pair, new HashSet<Integer>());
+    }
+
+    private static String check(IslandPair pair, Set<Integer> visited) {
         return "";
     }
 
