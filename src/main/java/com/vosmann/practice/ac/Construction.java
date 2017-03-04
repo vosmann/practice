@@ -1,18 +1,18 @@
 package com.vosmann.practice.ac;
 
-import com.google.common.collect.Sets;
-
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
 
 public class Construction {
 
     private static final Scanner SCANNER = getScanner();
     private static final int EMPTY = -1;
-    private static final int[][] NETWORK;
+    private static final int[][] NETWORK = new int[10][10];
 
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
         String result = run(SCANNER);
         System.out.println(result);
     }
@@ -81,13 +81,16 @@ public class Construction {
     }
 
     private static class IslandPair {
+
         int a;
         int b;
+
         public static IslandPair fromQuery(String query) {
             String islands = query.substring(6);
-            String [] islandParts = islands.split(" ");
+            String[] islandParts = islands.split(" ");
             return new IslandPair(Integer.valueOf(islandParts[0]), Integer.valueOf(islandParts[1]));
         }
+
         private IslandPair(int a, int b) {
             this.a = a;
             this.b = b;
