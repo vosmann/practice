@@ -1,6 +1,10 @@
-package com.vosmann.practice.ctci;
+package com.vosmann.practice.ctci.chapter2;
 
+import com.vosmann.practice.ctci.chapter2.Utils.Node;
 import org.junit.Test;
+
+import static com.vosmann.practice.ctci.chapter2.Utils.generateList;
+import static com.vosmann.practice.ctci.chapter2.Utils.print;
 
 public class Problem_2_4 {
 
@@ -33,16 +37,6 @@ public class Problem_2_4 {
         }
         prev.next = oth;
         return result;
-    }
-
-    public static class Node {
-
-        Node next;
-        int data;
-
-        public Node(int data) {
-            this.data = data;
-        }
     }
 
     @Test
@@ -80,21 +74,4 @@ public class Problem_2_4 {
         System.out.println();
     }
 
-    private Node generateList(int... data) {
-        Node list = null;
-        for (int i = 0; i < data.length; ++i) {
-            Node n = new Node(data[i]);
-            n.next = list;
-            list = n;
-        }
-        return list;
-    }
-
-    private void print(String prefix, Node list) {
-        System.out.print(prefix);
-        for (Node n = list; n != null; n = n.next) {
-            System.out.print(n.data + " -> ");
-        }
-        System.out.println("null");
-    }
 }
