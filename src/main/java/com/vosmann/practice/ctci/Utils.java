@@ -1,11 +1,11 @@
-package com.vosmann.practice.ctci.chapter2;
+package com.vosmann.practice.ctci;
 
 public class Utils {
 
     public static class Node {
 
-        Node next;
-        int data;
+        public Node next;
+        public int data;
 
         public Node(int data) {
             this.data = data;

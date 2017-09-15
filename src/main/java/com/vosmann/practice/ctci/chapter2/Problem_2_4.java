@@ -1,10 +1,10 @@
 package com.vosmann.practice.ctci.chapter2;
 
-import com.vosmann.practice.ctci.chapter2.Utils.Node;
+import com.vosmann.practice.ctci.Utils.Node;
 import org.junit.Test;
 
-import static com.vosmann.practice.ctci.chapter2.Utils.generateList;
-import static com.vosmann.practice.ctci.chapter2.Utils.print;
+import static com.vosmann.practice.ctci.Utils.generateList;
+import static com.vosmann.practice.ctci.Utils.print;
 
 public class Problem_2_4 {
 
