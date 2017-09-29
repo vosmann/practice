@@ -25,7 +25,14 @@ public class Problem_4_12 {
         if (n == null) return;
 
         int s = sum + n.data;
+
+        System.out.println(String.format("node: %d, c: %d, sum: %d, s: %d, s-t: %d, m: %s",
+                                         n.data, c.intValue(), sum, s, s - t, m));
         if (m.containsKey(s - t)) c.incrementAndGet();
+        System.out.println(String.format("node: %d, c: %d, sum: %d, s: %d, s-t: %d, m: %s",
+                                         n.data, c.intValue(), sum, s, s - t, m));
+        System.out.println("--");
+
         m.put(s, null);
         r(n.l, c, s, m, t);
         r(n.r, c, s, m, t);
